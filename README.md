@@ -9,11 +9,11 @@ A small student directory with a browser interface and a JSON API. It uses only 
 3. Run:
 
    ```sh
-   npm start
+   node server.js
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000).
-5. In another terminal, run `npm test` to execute the automated tests.
+5. In another terminal, run `node --test` to execute the automated tests.
 
 The app supports listing, adding, and removing students. Its API is `GET /api/students`, `POST /api/students`, and `DELETE /api/students/:id`; `GET /health` is used by deployment health checks.
 
