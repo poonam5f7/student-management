@@ -1,0 +1,10 @@
+{
+  "name": "student-management",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A dependency-free student management app with DevOps deployment examples",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}

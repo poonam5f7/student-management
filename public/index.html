@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#123b62">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">CAMPUS DIRECTORY</p>
+          <h1>Student Management</h1>
+          <p class="subtitle">Keep your student records organized in one place.</p>
+        </div>
+        <span class="header-mark" aria-hidden="true">SM</span>
+      </header>
+
+      <section class="panel" aria-labelledby="add-heading">
+        <h2 id="add-heading">Add a student</h2>
+        <form id="student-form">
+          <label>
+            Full name
+            <input name="name" autocomplete="name" placeholder="e.g. Alex Morgan" required>
+          </label>
+          <label>
+            Email address
+            <input name="email" type="email" autocomplete="email" placeholder="alex@example.com" required>
+          </label>
+          <label>
+            Course
+            <input name="course" placeholder="e.g. Computer Science" required>
+          </label>
+          <button type="submit">Add student</button>
+        </form>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="directory-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">RECORDS</p>
+            <h2 id="directory-heading">Student directory</h2>
+          </div>
+          <span id="student-count" class="count">0 students</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Name</th><th>Email</th><th>Course</th><th><span class="sr-only">Actions</span></th></tr>
+            </thead>
+            <tbody id="student-list"></tbody>
+          </table>
+          <p id="empty-state" class="empty-state" hidden>No students yet. Add the first student above.</p>
+        </div>
+      </section>
+      <footer>Student records are stored in memory and reset when the server restarts.</footer>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
